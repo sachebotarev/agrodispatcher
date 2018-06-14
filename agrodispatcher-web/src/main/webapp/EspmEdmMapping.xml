@@ -24,6 +24,9 @@
           <JPAEmbeddableType name="Contact">
               <EDMComplexType>Contact</EDMComplexType> 
             </JPAEmbeddableType>
+            <JPAEmbeddableType name="Address">
+              <EDMComplexType>Address</EDMComplexType> 
+            </JPAEmbeddableType>
           </JPAEmbeddableTypes>
      </PersistenceUnit>
 </JPAEDMMappingModel>

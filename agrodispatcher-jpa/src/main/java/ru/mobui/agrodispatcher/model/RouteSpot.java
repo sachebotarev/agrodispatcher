@@ -45,6 +45,9 @@ public class RouteSpot implements Serializable {
 	private boolean middlePoint;
 	
 	@Embedded
+	private Adderss address;
+	
+	@Embedded
 	private Contact contact;
 
 	public String getId() {
@@ -156,5 +159,19 @@ public class RouteSpot implements Serializable {
 	public void setContact(Contact contact) {
 		this.contact = contact;
 	}
+
+
+
+	public Adderss getAddress() {
+		return address;
+	}
+
+
+
+	public void setAddress(Adderss address) {
+		this.address = address;
+	}
+	
+	
    
 }
