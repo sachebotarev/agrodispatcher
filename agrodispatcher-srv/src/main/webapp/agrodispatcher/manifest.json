@@ -1,0 +1,163 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "mobui.agrodispatcher",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"dataSources": {
+			"mainService": {
+				"uri": "/agrodispatcher-web/agrodispatcher.svc",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+
+		]
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "mobui.agrodispatcher.view.App",
+			"type": "JS"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "mobui.agrodispatcher.i18n.i18n"
+				}
+			},
+			"": {
+				"dataSource": "mainService",
+				"settings": {
+					"metadataUrlParams": {
+						"sap-documentation": "heading"
+					}
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing":{
+			"config": {
+				"routerClass": "mobui.agrodispatcher.Router",
+				"viewType": "JS",
+				"viewPath": "mobui.agrodispatcher.view", 
+				"controlId": "appId",
+				"bypassed": {
+					"target": ["home"]
+				},
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": ["home"]
+				},
+				{
+					"pattern": "route",
+					"name": "route",
+					"target": ["route_list", "route_detail"]
+				},
+				{
+					"pattern": "route/{route_id}",
+					"name": "route_id",
+					"target": ["route_list", "route_detail"]
+				},
+								{
+				"pattern": "route_spot",
+					"name": "route_spot",
+					"target": ["route_spot_list", "not_found"]
+				},
+				{
+					"pattern": "route_spot/{route_spot_id}",
+					"name": "route_spot_id",
+					"target": ["route_spot_list", "route_spot_detail"]
+				}
+			],
+			"targets": {
+				"home": {
+					"viewName": "Home",
+					"viewLevel": "1",
+					"controlAggregation": "detailPages"
+				},
+				"route_spot_list":{
+					"viewName": "RouteSpotList",
+					"viewLevel": "1",
+					"controlAggregation": "masterPages"
+				},
+				"route_spot_detail":{
+					"viewName": "RouteSpotDetail",
+					"viewLevel": "1",
+					"controlAggregation": "detailPages"
+				},
+				"route_list":{
+					"viewName": "RouteList",
+					"viewLevel": "1",
+					"controlAggregation": "masterPages"
+				},
+				"route_detail":{
+					"viewName": "RouteDetail",
+					"viewLevel": "1",
+					"controlAggregation": "detailPages"
+				},
+				"not_found":{
+					"viewName": "NotFound",
+					"viewLevel": "1",
+					"controlAggregation": "detailPages"
+				}
+			}
+		}
+	}
+}

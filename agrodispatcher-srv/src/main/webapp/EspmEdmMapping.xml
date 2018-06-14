@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<JPAEDMMappingModel xmlns="http://www.apache.org/olingo/odata2/jpa/processor/api/model/mapping">
+	<PersistenceUnit name="ru.mobui.agrodispatcher.model">
+		<EDMSchemaNamespace>ru.mobui.agrodispatcher</EDMSchemaNamespace> 
+			<JPAEntityTypes>
+				<JPAEntityType name="Route">
+					<EDMEntityType>Route</EDMEntityType> 
+					<EDMEntitySet>RouteSet</EDMEntitySet> 
+				</JPAEntityType>
+				<JPAEntityType name="Capacity">
+					<EDMEntityType>Capacity</EDMEntityType> 
+					<EDMEntitySet>CapacitySet</EDMEntitySet> 
+				</JPAEntityType>
+				<JPAEntityType name="RouteSpot">
+					<EDMEntityType>RouteSpot</EDMEntityType> 
+					<EDMEntitySet>RouteSpotSet</EDMEntitySet> 
+				</JPAEntityType>
+				<JPAEntityType name="RouteSection">
+					<EDMEntityType>RouteSection</EDMEntityType> 
+					<EDMEntitySet>RouteSectionSet</EDMEntitySet> 
+				</JPAEntityType>	
+			</JPAEntityTypes>
+			<JPAEmbeddableTypes>
+          <JPAEmbeddableType name="Contact">
+              <EDMComplexType>Contact</EDMComplexType> 
+            </JPAEmbeddableType>
+          </JPAEmbeddableTypes>
+     </PersistenceUnit>
+</JPAEDMMappingModel>

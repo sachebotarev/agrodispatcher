@@ -1,0 +1,41 @@
+[
+	{
+		"id":"08AB6F1B-F835-47B6-B3F2-00C75ECC6181",
+		"name":"Route Point 1",
+		"description": "Description for Route Point 1",
+		"latitude": "50.597467",
+		"longitude": "36.688849",
+		"startHour": "9",
+		"startMinute":"0",
+		"finishHour":"18",
+		"finishMinute":"00",
+		"breakStartHour":"13",
+		"breakStartMinute":"0",
+		"breakFinishHour":"14",
+		"breakFinishMinute":"0",
+		"loadingPoint": true,
+		"unloadingPoint": true,
+		"middlePoint":false,
+		"contact":{
+			"email":"chebotarev_sa@mobui.ru"
+		}
+	},
+	{
+		"id":"08AB6F1B-F835-47B6-B3F2-00C75ECC6182",
+		"name":"Route Point 2",
+		"description": "Description for Route Point 2",
+		"latitude": "50.697467",
+		"longitude": "36.588849",
+		"startHour": "9",
+		"startMinute":"0",
+		"finishHour":"18",
+		"finishMinute":"00",
+		"breakStartHour":"13",
+		"breakStartMiniute":"0",
+		"breakFinishHour":"14",
+		"breakFinishMiniute":"0",
+		"loadingPoint": true,
+		"unloadingPoint": false,
+		"middlePoint":false
+	}
+]
